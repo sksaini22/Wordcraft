@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* All elements will have a thin scrollbar in the specified color */
+* {
+  scrollbar-width: 10px;
+  scrollbar-color: #4A7C59 #DADDE0;
+}
+
+/* Webkit-based browsers */
+*::-webkit-scrollbar {
+  width: 10px; /* width of the scrollbar */
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+  background-color: #DADDE0;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+  background-color: #4A7C59;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #357548;
+}
+
+/* Handle when active */
+*::-webkit-scrollbar-thumb:active {
+  background-color: #3b8150;
+}
+
+
+  .post figure,iframe,pre,blockquote{
+    @apply overflow-x-auto w-full my-16;
+  }
+  
+ .post pre{
+    @apply bg-slate-900 text-white rounded p-1
+  }
+  .post code{
+    @apply bg-accent rounded-md p-[2px] px-[10px] mx-2 whitespace-normal overflow-hidden;
+  }
+  .post p{
+    @apply my-8 font-serif;
+  }
+  .post li{
+    @apply whitespace-normal overflow-auto;
+  }
